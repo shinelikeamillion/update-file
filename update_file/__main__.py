@@ -29,9 +29,9 @@ subprocess.run(["pip", "install", "-r", settings.input_requirements])
 content = subprocess.run(
     ["python", str(settings.input_script_file)], capture_output=True, check=True,
 ).stdout.decode("utf-8")
-logging.info("Writting content")
-with open(settings.input_update_file, "w") as f:
-    f.write(content)
+# logging.info("Writting content")
+# with open(settings.input_update_file, "w") as f:
+#     f.write(content)
 
 logging.info("Setting up GitHub Actions git user")
 subprocess.run(["git", "config", "user.name", "github-actions"], check=True)
