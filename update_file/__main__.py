@@ -10,8 +10,8 @@ from pydantic import BaseSettings
 
 def config_user():
     logging.info("Setting up GitHub Actions git user")
-    subprocess.run(["git", "config", "user.name", "github-actions"], check=True)
-    subprocess.run(["git", "config", "user.email", "github-actions@github.com"], check=True)
+    subprocess.run(["git", "config", "user.name", "sean"], check=True)
+    subprocess.run(["git", "config", "user.email", "geeks.liu@gmail.com"], check=True)
 
 
 def commit_and_push():
